@@ -1,17 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <title>90s Cursor Effects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="JavaScript mouse effects that follow your cursor or finger!"
+    />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐭</text></svg>">
+
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./dist/browser.js"> </script>
   </head>
   <body>
-    <main>
-        <h1>Welcome to My Website</h1>  
-    </main>
-    <script src="index.js"></script>
+    <header><h1>90s Cursor Effects</h1></header>
+
+    <div class="wrapper">
+      I'd like to take the web back a little bit, into the wonderful days where
+      knowing how to get your little mouse arrow to <span>dance</span> and
+      <span>sway</span> was the most of your worries.
+
+      <br /><br />Each of the cursor effects below are built for your modern
+      browser (fast, efficient, mobile friendly), and are super easy to add to
+      your site!
+
+      <br /><br />
+      To get started adding a cursor effect to your site, check out the
+      documentation
+      <a href="https://github.com/tholman/cursor-effects">on GitHub.</a>
+    </div>
+    <div class="cursor">
+      <div class="box">
+        <div class="info">
+          <div class="name">
+            <span>Ants</span
+            ><a href="https://github.com/tholman/cursor-effects"
+              >+ to your site</a
+            >
+          </div>
+          <div class="byline">
+            Little ants wander around, then follow your cursor in a line
+          </div>
+        </div>
+        <div id="ants" class="effect"></div>
+      </div>
+    </div>
   </body>
 </html>
