@@ -1,51 +1,35 @@
+<!--
+Source - https://stackoverflow.com/a/61163558
+Posted by Jonas, modified by community. See post 'Timeline' for change history
+Retrieved 2026-07-13, License - CC BY-SA 4.0
+-->
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>90s Cursor Effects</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="JavaScript mouse effects that follow your cursor or finger!"
-    />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐭</text></svg>">
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Example Mouse Tracker</title>
+      <style>    
+        body {height: 3000px;}
+        .dot {width: 2px;height: 2px;background-color: black;position: absolute;}
+      </style>
+    </head>
+    <body>
+    <p>Mouse tracker</p>
+    <script>
+    onmousemove = function(e){
+        //Logging purposes
+        console.log("mouse location:", e.clientX, e.clientY);
 
-
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./dist/browser.js"> </script>
-  </head>
-  <body>
-    <header><h1>90s Cursor Effects</h1></header>
-
-    <div class="wrapper">
-      I'd like to take the web back a little bit, into the wonderful days where
-      knowing how to get your little mouse arrow to <span>dance</span> and
-      <span>sway</span> was the most of your worries.
-
-      <br /><br />Each of the cursor effects below are built for your modern
-      browser (fast, efficient, mobile friendly), and are super easy to add to
-      your site!
-
-      <br /><br />
-      To get started adding a cursor effect to your site, check out the
-      documentation
-      <a href="https://github.com/tholman/cursor-effects">on GitHub.</a>
-    </div>
-    <div class="cursor">
-      <div class="box">
-        <div class="info">
-          <div class="name">
-            <span>Ants</span
-            ><a href="https://github.com/tholman/cursor-effects"
-              >+ to your site</a
-            >
-          </div>
-          <div class="byline">
-            Little ants wander around, then follow your cursor in a line
-          </div>
-        </div>
-        <div id="ants" class="effect"></div>
-      </div>
-    </div>
-  </body>
-</html>
+        //meat and potatoes of the snippet
+        var pos = e;
+        var dot;
+        dot = document.createElement('div');
+        dot.className = "dot";
+        dot.style.left = pos.x + "px";
+        dot.style.top = pos.y + "px";
+        document.body.appendChild(dot);
+    }      
+    </script>
+    </body>
+    </html>
